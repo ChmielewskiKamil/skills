@@ -5,12 +5,13 @@ Reusable security audit detectors for smart contract codebases. Each detector en
 ## Install
 
 ```bash
-git clone <this-repo> ~/projects/skills
-cd ~/projects/skills
+git clone https://github.com/ChmielewskiKamil/skills
+cd skills
+chmod +x install.sh
 ./install.sh
 ```
 
-This symlinks skills into `~/.claude/skills/` so they're available in every Claude Code session. To update, just `git pull`.
+This symlinks `~/.claude/skills` to the cloned repo so skills are available in every Claude Code session. To update, just `git pull`.
 
 ## Usage
 

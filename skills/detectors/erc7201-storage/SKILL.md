@@ -37,7 +37,7 @@ The namespace is typically derived as `keccak256(abi.encode(uint256(keccak256("<
 
 ### Step 1: Determine Applicability
 
-If `.audit/context.md` exists, read it for codebase understanding. Either way, search the codebase for indicators of namespaced storage:
+If `.audit/context.md` exists in the current working directory, read it for codebase understanding. Either way, search the current project's source files (NOT `~/.claude/`) for indicators of namespaced storage:
 
 - `keccak256` used to derive a fixed storage slot
 - Inline assembly with `.slot` access patterns

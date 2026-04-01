@@ -16,13 +16,15 @@ If it's not installed, skip this phase. Detectors will explore the codebase on t
 
 ## Phase 2: Run Detectors
 
-Discover all detector skills by reading the files in the `detectors/` directory relative to this skill's location. Each subdirectory contains a `SKILL.md` that defines a detector.
+Detectors live at `~/.claude/skills/detectors/`. Each subdirectory there (e.g. `~/.claude/skills/detectors/erc7201-storage/`) contains a `SKILL.md` that defines one detector.
 
-For each detector, spawn a sub-agent in parallel. Each sub-agent should:
+List all subdirectories in `~/.claude/skills/detectors/`. For each one, read its `SKILL.md` and spawn a sub-agent to execute it. Run all sub-agents in parallel.
 
-1. Read `.audit/context.md` for codebase understanding
-2. Execute the detector's methodology
-3. Write structured findings to `.audit/findings/<detector-name>.md`
+Each sub-agent should:
+
+1. Read `.audit/context.md` if it exists (from Phase 1)
+2. Read the detector's `SKILL.md` and follow its methodology against the current project's codebase
+3. Write structured findings to `.audit/findings/<detector-name>.md` in the current project directory
 
 Use this format for each findings file:
 
