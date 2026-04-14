@@ -89,21 +89,15 @@ This is the holy structure. You MUST NOT deviate from it.
 ```
 ### [Severity] Title starts with capital letter and can include `code` syntax in backticks
 
-
 **File(s)**: [`path/to/file.sol`](link)
-
 
 **Description**: <description text here>
 
-
 **Recommendation(s)**: <recommendation text here>
-
 
 **Status**: Unresolved
 
-
 **Update from the client**: <empty or client text>
-
 
 ---
 ```
