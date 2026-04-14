@@ -306,6 +306,13 @@ NO:
 uint256 totalDeposits; // @audit-issue This variable is unused.
 ```
 
+### No line number references
+
+Never reference specific line numbers (e.g., "at line 133", "on line 45", "line 200") in any part of the finding. Line numbers change as code evolves and mean nothing to the reader. Instead, reference the relevant function, variable, or code construct by name.
+
+NO: "At line 133, the `amount` variable is not validated."
+YES: "In the `deposit(...)` function, the `amount` variable is not validated."
+
 ### Keep language simple
 
 Use the simplest words and sentence structures possible. The finding must be understandable by someone with only basic familiarity with the project. Avoid jargon when a simpler term works. Prefer short sentences over long ones.
